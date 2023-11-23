@@ -119,9 +119,9 @@ header.navbar-container .nav-list li a:hover {
 
 /* Medium devices (landscape tablets, 768px and down) */
 @media screen and (max-width: 768px) {
-  body {
+  /* body {
     background-color: #d4d4d2;
-  }
+  } */
   header.navbar-container {
     flex-direction: column;
     text-align: center;
@@ -140,8 +140,6 @@ header.navbar-container .nav-list li a:hover {
 
 @media screen and (max-width: 500px) {
   .product-list {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     padding: 2px;
   }

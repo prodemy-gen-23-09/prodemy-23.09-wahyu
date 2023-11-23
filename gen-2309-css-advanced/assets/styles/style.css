@@ -60,9 +60,9 @@ header.navbar-container .nav-list li a:hover {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 10px;
-  margin: 15px;
+  margin: 10px 20px;
   max-width: 160px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 90px rgba(0, 0, 0, 0.1);
   padding: 5px;
 }
 
@@ -76,7 +76,7 @@ header.navbar-container .nav-list li a:hover {
   padding: 10px;
   color: #333;
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .product .description {
