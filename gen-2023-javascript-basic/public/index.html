@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <header class="navbar-container">
+      <div class="logo">
+        <img src="image/ae-removebg-preview.png" alt="Logo" />
+      </div>
+      <nav class="nav-list">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="#">Cart</a></li>
+        </ul>
+      </nav>
+      <div></div>
+    </header>
+
+    <section class="product-list">
+      <div
+        id="product1"
+        class="product"
+        onclick="handleProductClick('product1', 'Kopi Arabika', 'image/coffee.jpg', 'Karakter kopi robusta ini memiliki aroma yang kuat dan terasa kasar. Rasa dari kopi robusta ini juga lebih pahit daripada kopi lainnya. Kopi ini cocok untuk dicampur dengan susu dan coklat saat penyajiannya. Dapat dicampur susu dan coklat karena rasa kopi ini tidak akan kalah dengan rasa lainnya', 'Rp.29.999,00')"
+      >
+        <img id="productImage" src="image/coffee.jpg" alt="Kopi Arabika" />
+        <h2 id="productName">Kopi Robusta</h2>
+        <div class="description" id="productDescription">
+          Karakter kopi robusta ini memiliki aroma yang kuat dan terasa kasar.
+          Rasa dari kopi robusta ini juga lebih pahit daripada kopi lainnya.
+          Kopi ini cocok untuk dicampur dengan susu dan coklat saat
+          penyajiannya. Dapat dicampur susu dan coklat karena rasa kopi ini
+          tidak akan kalah dengan rasa lainnya.
+        </div>
+        <p id="productPrice"><strong>Rp.29.999,00</strong></p>
+        <div class="button">
+          <button type="text">Add to Cart</button>
+        </div>
+      </div>
+
+      <div
+        id="product2"
+        class="product"
+        onclick="handleProductClick('product2', 'Hot Espresso', 'image/espresso173.jpg', 'Ekstrak biji kopi Arabika murni tanpa campuran', 'Rp.19.999,00')"
+      >
+        <img id="productImage" src="image/espresso173.jpg" alt="Hot Espresso" />
+        <h2 id="productName">Hot Espresso</h2>
+        <div class="description" id="productDescription">
+          Ekstrak biji kopi Arabika murni tanpa campuran
+        </div>
+        <p id="productPrice"><strong>Rp.19.999,00</strong></p>
+        <div class="button">
+          <button type="text">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="product.js"></script>
+  </body>
+</html>

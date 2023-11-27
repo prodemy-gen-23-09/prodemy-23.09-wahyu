@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Product</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="flex justify-around bg-white top-0 sticky items-center py-6">
+      <div>
+        <img class="h-8" src="image/ae-removebg-preview.png" alt="Logo" />
+      </div>
+      <nav>
+        <ul class="flex">
+          <li>
+            <a
+              href="index.html"
+              class="text-black text-lg font-medium px-4 py-2 hover:text-[#006041] transition-colors duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black text-lg font-medium px-4 py-2 hover:text-[#006041] transition-colors duration-300"
+              >Category</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black text-lg font-medium px-4 py-2 hover:text-[#006041] transition-colors duration-300"
+              >Cart</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <div class="flex justify-center bg-white rounded-md">
+        <div class="flex flex-col md:flex-row">
+          <div class="w-1/2">
+            <div class="flex justify-center bg-gray-200 rounded-lg">
+              <!-- Menggunakan script untuk mendapatkan parameter dari localStorage -->
+              <img
+                class="w-1/2 h-1/2 object-cover"
+                src=""
+                id="productImage"
+                alt="Product Image"
+              />
+            </div>
+          </div>
+          <div class="flex-1 pl-0 md:pl-[60px] md:items-center">
+            <!-- Menggunakan script untuk mendapatkan parameter dari localStorage -->
+            <strong
+              class="title-menu text-[rgb(34,33,38)] text-[14px] md:text-[40px] font-semibold"
+              id="productName"
+            ></strong>
+            <div class="flex text-[#A24B31] font-bold pd-20">
+              <!-- Menggunakan script untuk mendapatkan parameter dari localStorage -->
+              <span class="text-[16px] md:text-[20px]" id="productPrice"></span>
+            </div>
+            <!-- Menggunakan script untuk mendapatkan parameter dari localStorage -->
+            <p
+              class="mb-0 text-[#828282] font-medium text-[11px] md:text-[20px]"
+              id="productDescription"
+            ></p>
+            <div class="py-3">
+              <button
+                class="bg-blue-500 text-white px-3 py-1 rounded-l border border-blue-700"
+              >
+                -
+              </button>
+              <span
+                id="quantity"
+                class="bg-white border-l border-r px-3 py-1 border-blue-700"
+                >1</span
+              >
+              <button
+                class="bg-blue-500 text-white px-3 py-1 rounded-r border border-blue-700"
+              >
+                +
+              </button>
+            </div>
+            <div>
+              <button
+                class="bg-transparent text-[#006041] text-[18px] font-medium py-1 px-4 rounded-2xl border border-[#006041] hover:bg-[#006041] hover:text-white"
+              >
+                Pesan Coffee
+              </button>
+              <button
+                class="bg-[#006041] text-white text-[18px] font-medium py-1 px-4 rounded-2xl border border-[#006041] hover:bg-transparent hover:text-[#006041] transition duration-300"
+              >
+                + Keranjang
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="product.js"></script>
+    <script>
+      // Mendapatkan data dari localStorage
+      const productId = localStorage.getItem("productId");
+      const productName = localStorage.getItem("productName");
+      const productImage = localStorage.getItem("productImage");
+      const productDescription = localStorage.getItem("productDescription");
+      const productPrice = localStorage.getItem("productPrice");
+
+      // Menetapkan data ke elemen-elemen HTML
+      document.getElementById("productImage").src = productImage;
+      document.getElementById("productName").innerText = productName;
+      document.getElementById("productDescription").innerText =
+        productDescription;
+      document.getElementById("productPrice").innerText = productPrice;
+    </script>
+  </body>
+</html>
