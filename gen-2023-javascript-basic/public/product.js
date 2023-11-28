@@ -12,15 +12,13 @@ function handleProductClick(
   localStorage.setItem("productDescription", productDescription);
   localStorage.setItem("productPrice", productPrice);
 
-  // Log the data to the console for debugging
-  console.log("Product data stored in localStorage:", {
-    productId,
-    productName,
-    productImage,
-    productDescription,
-    productPrice,
-  });
+  // console.log("Product data stored in localStorage:", {
+  //   productId,
+  //   productName,
+  //   productImage,
+  //   productDescription,
+  //   productPrice,
+  // });
 
-  // Redirect to the detailProduct.html page
   window.location.href = "detailProduct.html";
 }

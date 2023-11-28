@@ -1,4 +1,4 @@
-const product = [
+const menu = [
   {
     name: "Hot Coffee",
     catagory: "coffee",
@@ -41,19 +41,32 @@ const product = [
   },
 ];
 
-// const snackProduct = product.filter((product) => product.catagory === "snack");
-// console.log(snackProduct);
+// const snackmenu = menu.filter((menu) => menu.catagory === "snack");
+// console.log(snackmenu);
 
-// const filterStok = product.filter((product) => product.stok > 20);
+// const filterStok = menu.filter((menu) => menu.stok > 20);
 // console.log(filterStok);
 
-// const nonCoffee = product.filter((product) => product.catagory != "coffee");
+// const nonCoffee = menu.filter((menu) => menu.catagory != "coffee");
 // console.log(nonCoffee);
 
-// const a = product[0];
+// const a = menu[0];
 // a.price = 20000;
+// console.log(menu[0]);
 
-// const coffeeProduct = product.filter(
-//   (product) => product.catagory === "coffee"
+// const coffeemenu = menu.filter(
+//   (menu) => menu.catagory === "coffee"
 // );
-// console.log(coffeeProduct);
+// console.log(coffeemenu);
+
+menu.forEach((menu) => {
+  menu["keterangan"] = "Banyak";
+  if (menu.stok <= 50) {
+    menu["keterangan"] = "Sedang";
+  }
+  if (menu.stok <= 25) {
+    menu["keterangan"] = "sedikit";
+  }
+});
+
+console.log(menu);
