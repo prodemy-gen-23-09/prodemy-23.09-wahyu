@@ -4,10 +4,15 @@ const mahasiswa1 = {
   prodi: "fisika",
 };
 
+const updateMahasiswa1 = {
+  domisili: "Kab. Sleman",
+  alamat: "Kab. Cilacap",
+};
+
 // const a = mahasiswa1;
 // a.umur = 23;
-
-// console.log(mahasiswa1);
+// const updateData = { ...mahasiswa1, ...updateMahasiswa1 };
+// console.log(updateData);
 
 const damas = [
   {
@@ -22,11 +27,11 @@ const damas = [
   },
 ];
 
-const a = damas[0];
-const b = damas[1];
-a.umur = 23;
-b.umur = 21;
-console.log(damas);
+// const a = damas[0];
+// const b = damas[1];
+// a.umur = 23;
+// b.umur = 21;
+// console.log(damas);
 
 const damas1 = [
   {
@@ -36,7 +41,12 @@ const damas1 = [
   },
 ];
 
-// const dataMahasiswa = [...damas, ...damas1];
-// const b = dataMahasiswa[0];
-// a.prodi = "matematika";
-// console.log(dataMahasiswa);
+// Spread Operator
+const dataMahasiswa = [...damas, ...damas1];
+const a = dataMahasiswa[0];
+a.prodi = "matematika";
+console.log(dataMahasiswa);
+
+// menambah data nenggunakan push()
+damas.push(damas1);
+// console.log(damas);

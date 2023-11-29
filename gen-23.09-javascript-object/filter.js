@@ -50,23 +50,25 @@ const menu = [
 // const nonCoffee = menu.filter((menu) => menu.catagory != "coffee");
 // console.log(nonCoffee);
 
-// const a = menu[0];
-// a.price = 20000;
+const a = menu[0];
+a.stok = 75;
 // console.log(menu[0]);
 
-// const coffeemenu = menu.filter(
-//   (menu) => menu.catagory === "coffee"
-// );
-// console.log(coffeemenu);
+// Melakukan filter "coffee"
+const coffeemenu = menu
+  .filter((menu) => menu.catagory === "coffee")
+  .map((menu) => menu.name);
+console.log(coffeemenu);
 
-menu.forEach((menu) => {
-  menu["keterangan"] = "Banyak";
-  if (menu.stok <= 50) {
-    menu["keterangan"] = "Sedang";
-  }
-  if (menu.stok <= 25) {
-    menu["keterangan"] = "sedikit";
-  }
-});
+// Manipulasi Data (menambah data menggunakan forEach)
+// menu.forEach((menu) => {
+//   menu["keterangan"] = "Stok Banyak";
+//   if (menu.stok <= 50) {
+//     menu["keterangan"] = "Stok Sedikit";
+//   }
+//   // if (menu.stok <= 25) {
+//   //   menu["keterangan"] = "Stok sedikit";
+//   // }
+// });
 
-console.log(menu);
+// console.log(menu);
