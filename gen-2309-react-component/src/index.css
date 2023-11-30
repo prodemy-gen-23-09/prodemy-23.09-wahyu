@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .product-card {
+  background-color: #f3f6f4;
+  border: 1px solid #f3f6f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 100px rgba(0, 0, 0, 0.1);
+  margin: 30px;
+  max-width: 200px;
+}
+
+.product-image {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.product-details {
+  padding-left: 10px;
+}
+
+.product-name {
+  font-size: 18px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #555555;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #e44d26;
+} */
