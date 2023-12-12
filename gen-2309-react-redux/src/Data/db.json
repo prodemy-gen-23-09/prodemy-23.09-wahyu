@@ -1,0 +1,152 @@
+{
+  "kopi": [
+    {
+      "id": 1,
+      "name": "Nutty Oat Latte",
+      "description": "Espresso dari biji kopi khas nusantara dipadukan susu oat gluten-free dan sensasi nutty dari hazelnut.",
+      "price": 39000,
+      "img": "https://static.fore.coffee/product/Nutty_Oat_Latte.jpeg",
+      "thumbnails": [
+        "https://static.fore.coffee/product/Buttercream%20Choco%20Mint.jpg",
+        "https://static.fore.coffee/product/Buttercream%20latte.jpg",
+        "https://static.fore.coffee/product/buttercream%20tiramissu.jpg"
+      ],
+      "releaseOn": "2023-11-01"
+    },
+    {
+      "id": 2,
+      "name": "Double Iced Shaken Latte",
+      "description": "Paduan klasik 2 shot espresso dengan susu dan krim",
+      "price": 33000,
+      "img": "https://static.fore.coffee/product/doubleicedshaken173.jpg",
+      "thumbnails": [
+        "https://static.fore.coffee/product/Buttercream%20Choco%20Mint.jpg",
+        "https://static.fore.coffee/product/Buttercream%20latte.jpg",
+        "https://static.fore.coffee/product/buttercream%20tiramissu.jpg"
+      ],
+      "releaseOn": "2023-11-01"
+    },
+    {
+      "id": 3,
+      "name": "Iced Salted Caramel Mocha",
+      "description": "Perpaduan coklat, latte dari house blend Fore, dan gurihnya caramel",
+      "price": 30000,
+      "img": "https://static.fore.coffee/product/saltedcarameliced173.jpg",
+      "thumbnails": [
+        "https://static.fore.coffee/product/Buttercream%20Choco%20Mint.jpg",
+        "https://static.fore.coffee/product/Buttercream%20latte.jpg",
+        "https://static.fore.coffee/product/buttercream%20tiramissu.jpg"
+      ],
+      "releaseOn": "2023-11-11"
+    },
+    {
+      "id": 4,
+      "name": "Hot Salted Caramel Mocha",
+      "description": "Perpaduan coklat, latte dari house blend Fore, dan gurihnya caramel",
+      "price": 31000,
+      "img": "https://static.fore.coffee/product/salted-caramel173.jpg",
+      "thumbnails": [
+        "https://static.fore.coffee/product/Buttercream%20Choco%20Mint.jpg",
+        "https://static.fore.coffee/product/Buttercream%20latte.jpg",
+        "https://static.fore.coffee/product/buttercream%20tiramissu.jpg"
+      ],
+      "releaseOn": "2023-11-21"
+    },
+    {
+      "id": 5,
+      "name": "Iced Americano Coldplay",
+      "description": "Espresso shot dalam segelas air dengan menjaga ketebalan rasa kopinya",
+      "price": 24000,
+      "img": "https://static.fore.coffee/product/americanoiced173.jpg",
+      "thumbnails": [
+        "https://static.fore.coffee/product/Buttercream%20Choco%20Mint.jpg",
+        "https://static.fore.coffee/product/Buttercream%20latte.jpg",
+        "https://static.fore.coffee/product/buttercream%20tiramissu.jpg"
+      ],
+      "releaseOn": "2023-11-31"
+    },
+    {
+      "name": "Iced Classic Latte",
+      "description": "Perpaduan rasa espresso premium dengan saus krim spesial Fore",
+      "price": 24000,
+      "img": "https://static.fore.coffee/product/classiclatteiced173.jpg",
+      "thumbnails": [
+        "https://static.fore.coffee/product/Buttercream%20Choco%20Mint.jpg",
+        "https://static.fore.coffee/product/Buttercream%20latte.jpg",
+        "https://static.fore.coffee/product/buttercream%20tiramissu.jpg"
+      ],
+      "releaseOn": "2023-10-01",
+      "id": 6
+    }
+  ],
+  "product": [
+    {
+      "productName": "Iced Americano Coldplay",
+      "productDescription": "Espresso shot dalam segelas air dengan menjaga ketebalan rasa kopinya",
+      "productPrice": 24000,
+      "productImage": "https://static.fore.coffee/product/classiclatteiced173.jpg",
+      "productRelease": "2023-02-03",
+      "id": 1
+    },
+    {
+      "productName": "Americano Coldplay",
+      "productDescription": "Espresso shot dalam segelas air dengan menjaga ketebalan rasa kopinya",
+      "productPrice": 24000,
+      "productImage": "https://static.fore.coffee/product/classiclatteiced173.jpg",
+      "productRelease": "2013-03-02",
+      "id": 2
+    }
+  ],
+  "cart": [
+    {
+      "productId": 1,
+      "name": "Nutty Oat Latte",
+      "description": "Espresso dari biji kopi khas nusantara dipadukan susu oat gluten-free dan sensasi nutty dari hazelnut.",
+      "price": "Rp 39.000,00",
+      "img": "https://static.fore.coffee/product/Nutty_Oat_Latte.jpeg",
+      "quantity": 1,
+      "total": "Rp 39.000,00",
+      "id": 14
+    },
+    {
+      "productId": 5,
+      "name": "Iced Americano Coldplay",
+      "description": "Espresso shot dalam segelas air dengan menjaga ketebalan rasa kopinya",
+      "price": "Rp 24.000,00",
+      "img": "https://static.fore.coffee/product/americanoiced173.jpg",
+      "quantity": 4,
+      "total": "Rp 96.000,00",
+      "id": 15
+    },
+    {
+      "productId": 1,
+      "name": "Nutty Oat Latte",
+      "description": "Espresso dari biji kopi khas nusantara dipadukan susu oat gluten-free dan sensasi nutty dari hazelnut.",
+      "price": "Rp 39.000,00",
+      "img": "https://static.fore.coffee/product/Nutty_Oat_Latte.jpeg",
+      "quantity": 1,
+      "total": "Rp 39.000,00",
+      "id": 16
+    },
+    {
+      "productId": 1,
+      "name": "Nutty Oat Latte",
+      "description": "Espresso dari biji kopi khas nusantara dipadukan susu oat gluten-free dan sensasi nutty dari hazelnut.",
+      "price": "Rp 39.000,00",
+      "img": "https://static.fore.coffee/product/Nutty_Oat_Latte.jpeg",
+      "quantity": 3,
+      "total": "Rp 117.000,00",
+      "id": 17
+    },
+    {
+      "productId": 2,
+      "name": "Double Iced Shaken Latte",
+      "description": "Paduan klasik 2 shot espresso dengan susu dan krim",
+      "price": "Rp 33.000,00",
+      "img": "https://static.fore.coffee/product/doubleicedshaken173.jpg",
+      "quantity": 4,
+      "total": "Rp 132.000,00",
+      "id": 18
+    }
+  ]
+}
