@@ -1,66 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import { initialProducts } from "../Data/kopi";
 import ProductCard from "../components/Product";
 
 function Menu() {
-  const initialProducts = useMemo(
-    () => [
-      {
-        id: 1,
-        name: "Nutty Oat Latte",
-        description:
-          "Espresso dari biji kopi khas nusantara dipadukan susu oat gluten-free dan sensasi nutty dari hazelnut.",
-        price: 39000,
-        imageUrl: "https://static.fore.coffee/product/Nutty_Oat_Latte.jpeg",
-        updatedAt: new Date("2023-11-01"),
-      },
-      {
-        id: 2,
-        name: "Double Iced Shaken Latte",
-        description: "Paduan klasik 2 shot espresso dengan susu dan krim",
-        price: 33000,
-        imageUrl: "https://static.fore.coffee/product/doubleicedshaken173.jpg",
-        updatedAt: new Date("2023-11-01"),
-      },
-      {
-        id: 3,
-        name: "Iced Salted Caramel Mocha",
-        description:
-          "Perpaduan coklat, latte dari house blend Fore, dan gurihnya caramel",
-        price: 30000,
-        imageUrl: "https://static.fore.coffee/product/saltedcarameliced173.jpg",
-        updatedAt: new Date("2023-11-11"),
-      },
-      {
-        id: 4,
-        name: "Hot Salted Caramel Mocha",
-        description:
-          "Perpaduan coklat, latte dari house blend Fore, dan gurihnya caramel",
-        price: 31000,
-        imageUrl: "https://static.fore.coffee/product/salted-caramel173.jpg",
-        updatedAt: new Date("2023-11-21"),
-      },
-      {
-        id: 5,
-        name: "Iced Americano Coldplay",
-        description:
-          "Espresso shot dalam segelas air dengan menjaga ketebalan rasa kopinya",
-        price: 24000,
-        imageUrl: "https://static.fore.coffee/product/americanoiced173.jpg",
-        updatedAt: new Date("2023-11-31"),
-      },
-      {
-        id: 6,
-        name: "Iced Americano Coldplay",
-        description:
-          "Espresso shot dalam segelas air dengan menjaga ketebalan rasa kopinya",
-        price: 25000,
-        imageUrl: "https://static.fore.coffee/product/americanoiced173.jpg",
-        updatedAt: new Date("2023-10-01"),
-      },
-    ],
-    []
-  );
-
   const [filteredProducts, setFilteredProducts] = useState(initialProducts);
   const [sortCriteria, setSortCriteria] = useState("terbaru");
 
@@ -91,12 +34,16 @@ function Menu() {
           setFilteredProducts([...initialProducts]);
       }
     };
-
     sortProducts();
-  }, [sortCriteria, initialProducts]);
+  }, [sortCriteria]);
 
   const handleSortChange = (criteria) => {
     setSortCriteria(criteria);
+  };
+
+  const navigate = useNavigate();
+  const onClickCard = (id) => {
+    navigate(`/detail/${id}`);
   };
 
   return (
@@ -139,16 +86,19 @@ function Menu() {
       </div>
 
       <div className="flex flex-wrap justify-center">
-        {filteredProducts.map((product) => (
-          <ProductCard
-            key={product.id}
-            name={product.name}
-            description={product.description}
-            price={product.price}
-            imageUrl={product.imageUrl}
-            updatedAt={product.updatedAt}
-          />
-        ))}
+        {filteredProducts.map(
+          ({ id, name, description, img, price, releaseOn }) => (
+            <ProductCard
+              key={id}
+              name={name}
+              description={description}
+              price={price}
+              image={img}
+              releaseOn={releaseOn}
+              onClick={() => onClickCard(id)}
+            />
+          )
+        )}
       </div>
     </div>
   );

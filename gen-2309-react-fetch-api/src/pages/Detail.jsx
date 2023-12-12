@@ -29,7 +29,7 @@ const DetailPage = () => {
           alt={product.name}
           className="w-full h-full object-cover rounded-xl"
         />
-        <div className="flex justify-start w-3/4 gap-9 ">
+        <div className="flex justify-start w-3/4 gap-9">
           <img
             src={product.img}
             alt="Thumbnail 1"
@@ -37,24 +37,15 @@ const DetailPage = () => {
             onClick={() => handleThumbnailClick(product.img)}
           />
 
-          <img
-            src={product.thumbnail1}
-            alt="Thumbnail 1"
-            className="w-1/4 h-auto cursor-pointer rounded-xl"
-            onClick={() => handleThumbnailClick(product.thumbnail1)}
-          />
-          <img
-            src={product.thumbnail2}
-            alt="Thumbnail 2"
-            className="w-1/4 h-auto cursor-pointer rounded-xl"
-            onClick={() => handleThumbnailClick(product.thumbnail2)}
-          />
-          <img
-            src={product.thumbnail3}
-            alt="Thumbnail 3"
-            className="w-1/4 h-auto cursor-pointer rounded-xl"
-            onClick={() => handleThumbnailClick(product.thumbnail3)}
-          />
+          {product.thumbnails.map((thumbnail, index) => (
+            <img
+              key={index}
+              src={thumbnail}
+              alt={`Thumbnail ${index + 1}`}
+              className="w-1/4 h-auto cursor-pointer rounded-xl"
+              onClick={() => handleThumbnailClick(thumbnail)}
+            />
+          ))}
         </div>
       </div>
       <div className="w-1/2">

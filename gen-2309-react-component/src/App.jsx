@@ -1,7 +1,7 @@
 import Footer from "../src/components/Footer";
 import ProductCard from "../src/components/Product";
 import Header from "./components/Header";
-import "/src/App.css";
+// import "/src/App.css";
 
 function App() {
   const products = [

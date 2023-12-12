@@ -24,12 +24,11 @@ function HomeWithSWR() {
         "Perpaduan rasa espresso premium dengan saus krim spesial Fore",
       price: 24000,
       img: "https://static.fore.coffee/product/classiclatteiced173.jpg",
-      thumbnail1:
+      thumbnails: [
         "https://static.fore.coffee/product/Buttercream%20Choco%20Mint.jpg",
-      thumbnail2: "https://static.fore.coffee/product/Buttercream%20latte.jpg",
-      thumbnail3:
+        "https://static.fore.coffee/product/Buttercream%20latte.jpg",
         "https://static.fore.coffee/product/buttercream%20tiramissu.jpg",
-      thumbnail4: "https://static.fore.coffee/product/light%20buttercream.jpg",
+      ],
       releaseOn: "2023-10-01",
     };
 
@@ -38,7 +37,6 @@ function HomeWithSWR() {
     axios
       .post("http://localhost:3000/kopi", newProductData)
       .then(() => {
-        // Refresh data after posting
         mutate("http://localhost:3000/kopi");
       })
       .catch((error) => {

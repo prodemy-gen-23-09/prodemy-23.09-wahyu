@@ -1,18 +1,19 @@
-const Header = () => {
+import { Link } from "react-router-dom";
+import Logo from "/src/assets/ae-removebg-preview.png";
+
+function Header() {
   return (
     <header className="navbar-container bg-white top-0 flex sticky py-3">
       <div className="flex items-center pl-[80px]">
-        <img
-          src="./src/assets/ae-removebg-preview.png"
-          alt="Logo"
-          className="h-9"
-        />
+        <Link to="/home">
+          <img src={Logo} alt="Logo" className="h-9" />
+        </Link>
       </div>
       <nav className="flex items-center ml-auto pr-[80px]">
         <ul className="flex">
           <li>
             <a
-              href="#"
+              href="/home"
               className="text-hijau text-lg font-semibold px-4 py-2 no-underline transition duration-300 hover:text-black"
             >
               About
@@ -20,7 +21,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="/listProduct"
               className="text-hijau text-lg font-semibold px-4 py-2 no-underline transition duration-300 hover:text-black"
             >
               Menu
@@ -28,7 +29,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="/cart"
               className="text-hijau text-lg font-semibold px-4 py-2 no-underline transition duration-300 hover:text-black"
             >
               Cart
@@ -38,6 +39,6 @@ const Header = () => {
       </nav>
     </header>
   );
-};
+}
 
 export default Header;

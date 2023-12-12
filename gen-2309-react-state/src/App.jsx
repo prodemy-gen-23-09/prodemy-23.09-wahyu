@@ -1,7 +1,7 @@
-import Footer from "../src/components/Footer";
-import Header from "./components/Header";
-// import Menu from "./components/Menu";
-import ProductDetails from "./components/ProductDetails";
+import Footer from "./layout/Footer";
+import Header from "./layout/Header";
+// import ProductDetails from "./pages/ProductDetails";
+import Menu from "./pages/Menu";
 // import "/src/App.css";
 import "/src/index.css";
 
@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="w-full">
       <Header />
-      {/* <Menu /> */}
-      <ProductDetails />
+      <Menu />
+      {/* <ProductDetails /> */}
       <Footer />
     </div>
   );

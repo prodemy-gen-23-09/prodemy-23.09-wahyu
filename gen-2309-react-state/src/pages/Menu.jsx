@@ -146,7 +146,6 @@ function Menu() {
             description={product.description}
             price={product.price}
             imageUrl={product.imageUrl}
-            updatedAt={product.updatedAt}
           />
         ))}
       </div>

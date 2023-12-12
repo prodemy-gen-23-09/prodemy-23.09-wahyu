@@ -70,10 +70,11 @@
       "description": "Perpaduan rasa espresso premium dengan saus krim spesial Fore",
       "price": 24000,
       "img": "https://static.fore.coffee/product/classiclatteiced173.jpg",
-      "thumbnail1": "https://static.fore.coffee/product/Buttercream%20Choco%20Mint.jpg",
-      "thumbnail2": "https://static.fore.coffee/product/Buttercream%20latte.jpg",
-      "thumbnail3": "https://static.fore.coffee/product/buttercream%20tiramissu.jpg",
-      "thumbnail4": "https://static.fore.coffee/product/light%20buttercream.jpg",
+      "thumbnails": [
+        "https://static.fore.coffee/product/Buttercream%20Choco%20Mint.jpg",
+        "https://static.fore.coffee/product/Buttercream%20latte.jpg",
+        "https://static.fore.coffee/product/buttercream%20tiramissu.jpg"
+      ],
       "releaseOn": "2023-10-01",
       "id": 6
     }
@@ -94,6 +95,48 @@
       "productImage": "https://static.fore.coffee/product/classiclatteiced173.jpg",
       "productRelease": "2013-03-02",
       "id": 2
+    }
+  ],
+  "cart": [
+    {
+      "productId": 2,
+      "name": "Double Iced Shaken Latte",
+      "description": "Paduan klasik 2 shot espresso dengan susu dan krim",
+      "price": "Rp 33.000,00",
+      "img": "https://static.fore.coffee/product/doubleicedshaken173.jpg",
+      "quantity": 3,
+      "total": "Rp 99.000,00",
+      "id": 8
+    },
+    {
+      "productId": 3,
+      "name": "Iced Salted Caramel Mocha",
+      "description": "Perpaduan coklat, latte dari house blend Fore, dan gurihnya caramel",
+      "price": "Rp 30.000,00",
+      "img": "https://static.fore.coffee/product/saltedcarameliced173.jpg",
+      "quantity": 1,
+      "total": "Rp 30.000,00",
+      "id": 13
+    },
+    {
+      "productId": 1,
+      "name": "Nutty Oat Latte",
+      "description": "Espresso dari biji kopi khas nusantara dipadukan susu oat gluten-free dan sensasi nutty dari hazelnut.",
+      "price": "Rp 39.000,00",
+      "img": "https://static.fore.coffee/product/Nutty_Oat_Latte.jpeg",
+      "quantity": 1,
+      "total": "Rp 39.000,00",
+      "id": 14
+    },
+    {
+      "productId": 5,
+      "name": "Iced Americano Coldplay",
+      "description": "Espresso shot dalam segelas air dengan menjaga ketebalan rasa kopinya",
+      "price": "Rp 24.000,00",
+      "img": "https://static.fore.coffee/product/americanoiced173.jpg",
+      "quantity": 4,
+      "total": "Rp 96.000,00",
+      "id": 15
     }
   ]
 }
