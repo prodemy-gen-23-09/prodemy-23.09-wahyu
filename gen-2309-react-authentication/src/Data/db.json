@@ -1,0 +1,60 @@
+{
+  "kopi": [
+    {
+      "name": "Iced Americano Coldplay",
+      "description": "Espresso shot dalam segelas air dengan menjaga ketebalan rasa kopinya",
+      "price": 24000,
+      "image": "https://static.fore.coffee/product/americanoiced173.jpg",
+      "releaseOn": "2014-11-12",
+      "id": 1
+    },
+    {
+      "name": "Hot Ekspresso",
+      "description": "Ekstrak biji kopi Arabika murni tanpa campuran",
+      "price": 20000,
+      "image": "https://static.fore.coffee/product/espresso173.jpg",
+      "releaseOn": "2021-12-10",
+      "id": 2
+    },
+    {
+      "name": "Nutty Oat Latte",
+      "description": "Espresso dari biji kopi khas nusantara dipadukan susu oat gluten-free dan sensasi nutty dari hazelnut.",
+      "price": 39,
+      "image": "https://static.fore.coffee/product/Nutty_Oat_Latte.jpeg",
+      "releaseOn": "2022-12-30",
+      "id": 3
+    },
+    {
+      "name": "Iced Classic Latte",
+      "description": "Perpaduan rasa espresso premium dengan saus krim spesial Fore",
+      "price": 24000,
+      "image": "https://static.fore.coffee/product/classiclatteiced173.jpg",
+      "releaseOn": "2023-12-03",
+      "id": 4
+    },
+    {
+      "name": "Iced Salted Caramel Mocha",
+      "description": "Perpaduan coklat, latte dari house blend Fore, dan gurihnya caramel",
+      "price": 33000,
+      "image": "https://static.fore.coffee/product/saltedcarameliced173.jpg",
+      "releaseOn": "2022-02-22",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@mail.com",
+      "password": "$2a$10$KiU5OKd4BoLUpMADfleysuzcNKr.tDVGS/nd0MK3Kue4rgGfuBlNq",
+      "username": "Admin",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "email": "user1@mail.com",
+      "password": "$2a$10$3x35pCZU.gDGIYv8Ahxt3OfmRUQrypDVy3ZA.bm2cWyAFZ5TxStqK",
+      "username": "User 1",
+      "role": "user",
+      "id": 2
+    }
+  ]
+}
