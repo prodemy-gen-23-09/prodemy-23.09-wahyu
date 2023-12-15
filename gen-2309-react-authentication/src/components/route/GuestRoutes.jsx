@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Navigate, Outlet } from "react-router-dom";
 
-export default function GeustRoutes() {
+export default function GuestRoutes() {
   const isLogin = useSelector((state) => state.auth.token !== "");
 
   if (isLogin) {

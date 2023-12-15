@@ -1,9 +1,14 @@
 import axios from "axios";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import useSWR, { mutate } from "swr";
+import { selectRole } from "../store/reducers/authSlice";
 
 function ListProduct() {
   const navigate = useNavigate();
+  const userRole = useSelector(selectRole);
+
   const { data } = useSWR("http://localhost:3000/kopi", (url) =>
     axios.get(url).then((res) => res.data)
   );
@@ -20,6 +25,13 @@ function ListProduct() {
       })
       .catch((error) => console.log("Error deleting product:", error));
   };
+
+  useEffect(() => {
+    if (userRole !== "admin") {
+      alert("Hanya admin yang dapat mengakses List Product.");
+      navigate("/home");
+    }
+  }, [userRole, navigate]);
 
   return (
     <div className="container mx-auto p-4">

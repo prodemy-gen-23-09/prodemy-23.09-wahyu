@@ -17,19 +17,11 @@
       "id": 2
     },
     {
-      "name": "Nutty Oat Latte",
-      "description": "Espresso dari biji kopi khas nusantara dipadukan susu oat gluten-free dan sensasi nutty dari hazelnut.",
-      "price": 39,
-      "image": "https://static.fore.coffee/product/Nutty_Oat_Latte.jpeg",
-      "releaseOn": "2022-12-30",
-      "id": 3
-    },
-    {
       "name": "Iced Classic Latte",
       "description": "Perpaduan rasa espresso premium dengan saus krim spesial Fore",
       "price": 24000,
       "image": "https://static.fore.coffee/product/classiclatteiced173.jpg",
-      "releaseOn": "2023-12-03",
+      "releaseOn": "2023-11-03",
       "id": 4
     },
     {
