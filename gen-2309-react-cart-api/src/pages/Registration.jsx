@@ -1,20 +1,16 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import * as yup from "yup";
-import { setToken, setUser } from "../store/reducers/authSlice";
 
 function Registration() {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const schema = yup.object().shape({
     email: yup.string().email().required("Email is required"),
     password: yup.string().min(5).max(32).required("Password is required"),
-    username: yup.string().required("Username is required"), // Change to username
-    role: yup.string().required("Role is required"),
+    username: yup.string().required("Username is required"),
   });
 
   const {
@@ -27,7 +23,6 @@ function Registration() {
   });
 
   const onSubmitForm = (data) => {
-    console.log("Form submitted!", data);
     const payload = {
       email: data.email,
       password: data.password,
@@ -46,17 +41,8 @@ function Registration() {
           );
         } else {
           axios
-            .post("http://localhost:3000/users", payload, {
-              headers: {
-                "Content-Type": "application/json",
-              },
-            })
-            .then((response) => {
-              const { accessToken, user } = response.data;
-
-              dispatch(setToken(accessToken));
-              dispatch(setUser(user));
-
+            .post("http://localhost:3000/users", payload)
+            .then(() => {
               alert("Successfully registered!");
               reset();
               navigate("/login");
@@ -72,60 +58,53 @@ function Registration() {
   };
 
   return (
-    <div className="max-w-md mx-auto">
-      <h1 className="text-center font-bold text-2xl mb-4">Registration</h1>
+    <div className=" max-w-md mx-auto">
       <form
-        className="flex flex-col gap-4"
+        className="bg-black p-8 shadow-md rounded-md max-w-md"
         onSubmit={handleSubmit(onSubmitForm)}
       >
-        <p className="text-center text-sm">
-          Already registered?{" "}
-          <Link
-            to="/login"
-            className="text-primary hover:underline hover:text-blue-900"
-          >
-            Login here
-          </Link>
-        </p>
+        <h1 className="text-center font-bold text-2xl mb-4 text-gray-300">
+          Registration
+        </h1>
 
-        <div className="mb-4">
-          <label htmlFor="email" className="text-sm">
+        <div className="mb-4 text-gray-300">
+          <label htmlFor="username" className="text-sm">
+            Username
+          </label>
+          <input
+            placeholder="Username"
+            className="w-full rounded-lg border-[1px] border-gray-200 p-4 text-sm focus:outline-sky-200 text-black"
+            {...register("username")}
+            id="username"
+          />
+          <p className="text-red-500 mt-1">{errors.username?.message}</p>
+        </div>
+
+        <div className="mb-4 text-gray-300 ">
+          <label htmlFor="email" className="text-sm ">
             Email
           </label>
           <input
             placeholder="Email"
-            className="w-full rounded-lg border-[1px] border-gray-200 p-4 text-sm focus:outline-sky-200"
+            className="w-full rounded-lg border-[1px] border-gray-200 p-4 text-sm focus:outline-sky-200 text-black"
             {...register("email")}
             id="email"
           />
           <p className="text-red-500 mt-1">{errors.email?.message}</p>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 text-gray-300">
           <label htmlFor="password" className="text-sm">
             Password
           </label>
           <input
             placeholder="Password"
-            className="w-full rounded-lg border-[1px] border-gray-200 p-4 text-sm focus:outline-sky-200"
+            className="w-full rounded-lg border-[1px] border-gray-200 p-4 text-sm focus:outline-sky-200 text-black"
             {...register("password")}
             id="password"
             type="password"
           />
           <p className="text-red-500 mt-1">{errors.password?.message}</p>
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="username" className="text-sm">
-            Username
-          </label>
-          <input
-            placeholder="Username"
-            className="w-full rounded-lg border-[1px] border-gray-200 p-4 text-sm focus:outline-sky-200"
-            {...register("username")}
-            id="username"
-          />
-          <p className="text-red-500 mt-1">{errors.username?.message}</p>
         </div>
 
         <button
@@ -134,6 +113,15 @@ function Registration() {
         >
           Register
         </button>
+        <p className="text-center mt-2 text-sm text-gray-300">
+          Sudah Punya Akun?{" "}
+          <Link
+            to="/login"
+            className="text-primary hover:underline hover:text-blue-900"
+          >
+            Login Disini
+          </Link>
+        </p>
       </form>
     </div>
   );

@@ -3,6 +3,7 @@ import GuestRoutes from "./components/route/GuestRoutes";
 import PrivateRoutes from "./components/route/PrivateRoutes";
 import Layout from "./layout/Layout";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import DetailProduct from "./pages/DetailProduct";
 import HomeWithSWR from "./pages/HomeWithSWR";
 import InputProduct from "./pages/InputProduct";
@@ -23,12 +24,13 @@ function App() {
         <Route element={<PrivateRoutes />}>
           <Route path="/listProduct" element={<ListProduct />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/detail/:id" element={<DetailProduct />} />
           <Route path="/inputProduct" element={<InputProduct />} />
           <Route path="/update/:id" element={<UpdateProduct />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Route>
 
         <Route path="register" element={<Registration />} />
+        <Route path="/detail/:id" element={<DetailProduct />} />
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<HomeWithSWR />} />
       </Routes>

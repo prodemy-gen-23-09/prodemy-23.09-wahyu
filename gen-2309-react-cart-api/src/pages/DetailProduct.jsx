@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { BeatLoader } from "react-spinners";
@@ -8,101 +8,73 @@ import { toRupiah } from "../utils/formatter";
 
 const fetcher = (url) => axios.get(url).then((response) => response.data);
 
-const DetailPage = () => {
+const DetailProduct = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [dataCart, setDataCart] = useState([]);
   const user = useSelector((state) => state.auth.user);
 
-  const { data, error } = useSWR(`http://localhost:3000/kopi/${id}`, fetcher);
+  const { data, isLoading } = useSWR(
+    `http://localhost:3000/kopi/${id}`,
+    fetcher
+  );
 
   const [mainImage, setMainImage] = useState(data ? data.img : "");
   const [quantity, setQuantity] = useState(1);
 
-  useEffect(() => {
-    const fetchCartData = async () => {
-      try {
-        const userId = user ? user.email : "";
-        const response = await axios.get(
-          `http://localhost:3000/cart?userId=${userId}`
-        );
-        setDataCart(response.data);
-      } catch (error) {
-        console.error("Error fetching cart data:", error);
-      }
-    };
-
-    fetchCartData();
-  }, [user]);
-
   const incrementQty = () => setQuantity(quantity + 1);
-  const decrementQty = () => {
-    if (quantity > 1) {
-      setQuantity( quantity - 1);
-    }
-  };
+  const decrementQty = () => setQuantity(Math.max(1, quantity - 1));
 
   const handleThumbnailClick = (thumbnailUrl) => {
     setMainImage(thumbnailUrl);
   };
 
-  const generateUniqueId = () => {
-    return Date.now().toString();
+  const addToCart = () => {
+    if (!data) return;
+
+    axios
+      .get(`http://localhost:3000/cart?id=${data.id}&&userId=${user.id}`)
+      .then((response) => {
+        const existingProduct = response.data;
+
+        if (existingProduct.length > 0) {
+          const updatedQuantity = existingProduct[0].quantity + quantity;
+
+          return axios.put(
+            `http://localhost:3000/cart/${existingProduct[0].id}`,
+            {
+              ...data,
+              userId: user.id,
+              quantity: updatedQuantity,
+            }
+          );
+        } else {
+          const payload = {
+            ...data,
+            userId: user.id,
+            quantity,
+          };
+
+          return axios.post("http://localhost:3000/cart", payload);
+        }
+      })
+      .then(() => {
+        navigate("/cart");
+        alert("Cart updated successfully!");
+      })
+      .catch((error) => {
+        console.error("Error updating/add to cart:", error);
+        alert(
+          "Failed to update/add product to the cart. Please try again later."
+        );
+      });
   };
 
-  const onClickAddToCart = async () => {
-    try {
-      const existingItem = dataCart.find(
-        (item) =>
-          item.name === data.name && item.userId === (user ? user.email : "")
-      );
-
-      if (existingItem) {
-        existingItem.quantity += quantity;
-
-        const response = await axios.put(
-          `http://localhost:3000/cart/${existingItem.id}`,
-          existingItem
-        );
-
-        console.log("Server Response:", response);
-      } else {
-        const payload = {
-          ...data,
-          quantity,
-          userId: user ? user.email : "",
-          id: generateUniqueId(),
-        };
-
-        const response = await axios.post(
-          "http://localhost:3000/cart",
-          payload
-        );
-
-        console.log("Server Response:", response);
-      }
-
-      navigate("/cart");
-    } catch (error) {
-      console.error("Error adding product to cart:", error);
-
-      if (error.response) {
-        console.error("Server Error Response:", error.response.data);
-      }
-    }
-  };
-
-  if (!data && !error) {
+  if (isLoading) {
     return (
       <div className="flex items-center justify-center h-full">
         <BeatLoader color="#38BDF8" />
       </div>
     );
-  }
-
-  if (error) {
-    console.error("Error fetching product details:", error);
-    return <p>Error fetching product details</p>;
   }
 
   return (
@@ -148,7 +120,7 @@ const DetailPage = () => {
               </button>
               <input
                 type="number"
-                className="text-center bg-gray-300 w-20 font-semibold text-md hover:text-black focus:text-black md:text-basecursor-default flex items-center text-gray-700 outline-none"
+                className="text-center bg-gray-300 w-20 font-semibold text-md hover:text-black focus:text-black md:text-base cursor-default flex items-center text-gray-700 outline-none"
                 name="Quantity"
                 value={quantity}
                 disabled
@@ -162,10 +134,16 @@ const DetailPage = () => {
             </div>
             <button
               className="bg-hijau text-white font-semibold py-3 px-6 rounded-xl"
-              onClick={onClickAddToCart}
+              onClick={addToCart}
             >
               Add to Cart
             </button>
+            {/* <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl"
+              onClick={onClickBuyNow}
+            >
+              Buy Now
+            </button> */}
           </div>
         </div>
       </div>
@@ -173,4 +151,4 @@ const DetailPage = () => {
   );
 };
 
-export default DetailPage;
+export default DetailProduct;

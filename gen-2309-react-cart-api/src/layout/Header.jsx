@@ -55,7 +55,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-      {isLoggedIn && (
+      {isLoggedIn ? (
         <div
           className="self-center cursor-pointer"
           onClick={() => setShowDropdown(!showDropdown)}
@@ -69,6 +69,21 @@ function Header() {
               Logout
             </div>
           )}
+        </div>
+      ) : (
+        <div className="flex items-center">
+          <Link
+            to="/login"
+            className="text-hijau text-lg font-semibold px-4 py-2 no-underline transition duration-300 hover:text-black"
+          >
+            Login
+          </Link>
+          <Link
+            to="/register"
+            className="text-hijau text-lg font-semibold px-4 py-2 no-underline transition duration-300 hover:text-black"
+          >
+            Daftar
+          </Link>
         </div>
       )}
     </header>

@@ -2,7 +2,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import { setToken, setUser } from "../store/reducers/authSlice";
 
@@ -45,14 +45,14 @@ function Login() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center">
+    <div className="max-w-md mx-auto">
       <form
-        className="bg-white p-8 shadow-md rounded-md max-w-md"
+        className="bg-black p-8 shadow-md rounded-md max-w-md"
         onSubmit={handleSubmit(onSubmitForm)}
       >
-        <h2 className="text-2xl font-bold mb-4">Login</h2>
+        <h2 className="text-2xl font-bold mb-4 text-gray-300">Login</h2>
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
+          <label className="block text-gray-300 text-sm font-bold mb-2">
             Email
           </label>
           <input
@@ -66,7 +66,7 @@ function Login() {
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-gray-300 text-sm font-bold mb-2"
             htmlFor="password"
           >
             Password
@@ -86,6 +86,15 @@ function Login() {
         >
           Log in
         </button>
+        <p className="text-center text-sm mt-2 text-gray-300">
+          Belum Punya Akun?{" "}
+          <Link
+            to="/register"
+            className="text-primary hover:underline hover:text-blue-900"
+          >
+            Daftar Sekarang
+          </Link>
+        </p>
       </form>
     </div>
   );
