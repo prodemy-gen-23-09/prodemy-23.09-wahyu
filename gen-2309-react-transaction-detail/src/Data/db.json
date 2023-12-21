@@ -1,0 +1,236 @@
+{
+  "kopi": [
+    {
+      "name": "Iced Americano Coldplay",
+      "description": "Espresso shot dalam segelas air dengan menjaga ketebalan rasa kopinya",
+      "price": 24000,
+      "image": "https://static.fore.coffee/product/americanoiced173.jpg",
+      "releaseOn": "2014-11-12",
+      "id": 1
+    },
+    {
+      "name": "Hot Ekspresso",
+      "description": "Ekstrak biji kopi Arabika murni tanpa campuran",
+      "price": 20000,
+      "image": "https://static.fore.coffee/product/espresso173.jpg",
+      "releaseOn": "2021-12-10",
+      "id": 2
+    },
+    {
+      "name": "Iced Classic Latte",
+      "description": "Perpaduan rasa espresso premium dengan saus krim spesial Fore",
+      "price": 24000,
+      "image": "https://static.fore.coffee/product/classiclatteiced173.jpg",
+      "releaseOn": "2023-11-03",
+      "id": 4
+    },
+    {
+      "name": "Iced Salted Caramel Mocha",
+      "description": "Perpaduan coklat, latte dari house blend Fore, dan gurihnya caramel",
+      "price": 33000,
+      "image": "https://static.fore.coffee/product/saltedcarameliced173.jpg",
+      "releaseOn": "2022-02-22",
+      "id": 5
+    },
+    {
+      "name": "Nutty Oat Latte",
+      "description": "Espresso dari biji kopi khas nusantara dipadukan susu oat gluten-free dan sensasi nutty dari hazelnut.",
+      "price": 40000,
+      "image": "https://static.fore.coffee/product/Nutty_Oat_Latte.jpeg",
+      "releaseOn": "2013-12-12",
+      "id": 6
+    },
+    {
+      "name": "Double Iced Shaken Latte",
+      "description": "Paduan klasik 2 shot espresso dengan susu dan krim",
+      "price": 33000,
+      "image": "https://static.fore.coffee/product/doubleicedshaken173.jpg",
+      "releaseOn": "2021-01-01",
+      "id": 7
+    },
+    {
+      "name": "Iced Cappuccino",
+      "description": "Paduan espresso dengan susu sapi pilihan dan foam tebal di atasnya",
+      "price": 29000,
+      "image": "https://static.fore.coffee/product/cappuccinoiced173.jpg",
+      "releaseOn": "2022-02-02",
+      "id": 8
+    },
+    {
+      "name": "Iced Café Latte",
+      "description": "Paduan espresso dengan susu sapi pilihan dan sedikit foam di atasnya",
+      "price": 30000,
+      "image": "https://static.fore.coffee/product/cafelatteiced173.jpg",
+      "releaseOn": "2023-03-03",
+      "id": 9
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@mail.com",
+      "password": "$2a$10$KiU5OKd4BoLUpMADfleysuzcNKr.tDVGS/nd0MK3Kue4rgGfuBlNq",
+      "username": "Admin",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "email": "user1@mail.com",
+      "password": "$2a$10$3x35pCZU.gDGIYv8Ahxt3OfmRUQrypDVy3ZA.bm2cWyAFZ5TxStqK",
+      "username": "User 1",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "email": "user2@mail.com",
+      "password": "$2a$10$l8VBMbtJH8Au41b6dmo5velyES7bAL8CylAPVCtSH1t5eA6TGq.3a",
+      "username": "User 2",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "email": "user3@mail.com",
+      "password": "$2a$10$Io6oFap.zgGtt5u2FYtqnukq3uFfsAr5FmkNSTgim9jSo5nsB0AUq",
+      "username": "User 3",
+      "role": "user",
+      "id": 4
+    }
+  ],
+  "cart": [],
+  "transaction": [
+    {
+      "name": "Wahyu",
+      "email": "user1@mail.com",
+      "alamat": "Ds. Kedungreja. Kec. Kedungreja, Cilacap",
+      "delivery": "JNP Same Day",
+      "payment": "Mobile Banking",
+      "wrap": true,
+      "products": [
+        {
+          "name": "Double Iced Shaken Latte",
+          "description": "Paduan klasik 2 shot espresso dengan susu dan krim",
+          "price": 33000,
+          "image": "https://static.fore.coffee/product/doubleicedshaken173.jpg",
+          "releaseOn": "2021-01-01",
+          "id": 7,
+          "userId": 2,
+          "quantity": 6
+        }
+      ],
+      "subtotal": "Rp 198.000,00",
+      "date": "2023-12-21T10:42:47.492Z",
+      "id": 1
+    },
+    {
+      "name": "Wahyu Haryo ",
+      "email": "user2@mail.com",
+      "alamat": "Ds. Kedungreja. Kec. Kedungreja, Cilacap",
+      "delivery": "JNP Same Day",
+      "payment": "E-Wallet",
+      "wrap": true,
+      "products": [
+        {
+          "name": "Double Iced Shaken Latte",
+          "description": "Paduan klasik 2 shot espresso dengan susu dan krim",
+          "price": 33000,
+          "image": "https://static.fore.coffee/product/doubleicedshaken173.jpg",
+          "releaseOn": "2021-01-01",
+          "id": 7,
+          "userId": 3,
+          "quantity": 3
+        }
+      ],
+      "subtotal": "Rp 99.000,00",
+      "date": "2023-12-21T11:57:51.149Z",
+      "id": 3
+    },
+    {
+      "name": "Wahyu Haryo ",
+      "email": "user2@mail.com",
+      "alamat": "Ds. Kedungreja. Kec. Kedungreja, Cilacap",
+      "delivery": "JNP Same Day",
+      "payment": "E-Wallet",
+      "wrap": true,
+      "products": [
+        {
+          "name": "Double Iced Shaken Latte",
+          "description": "Paduan klasik 2 shot espresso dengan susu dan krim",
+          "price": 33000,
+          "image": "https://static.fore.coffee/product/doubleicedshaken173.jpg",
+          "releaseOn": "2021-01-01",
+          "id": 7,
+          "userId": 3,
+          "quantity": 4
+        }
+      ],
+      "subtotal": "Rp 132.000,00",
+      "date": "2023-12-21T12:37:26.591Z",
+      "id": 4
+    },
+    {
+      "name": "Wahyu",
+      "email": "wahyu@mail.com",
+      "alamat": "Ds. Kedungreja. Kec. Kedungreja, Cilacap",
+      "delivery": "JNP Same Day",
+      "payment": "Mobile Banking",
+      "wrap": true,
+      "products": [
+        {
+          "name": "Hot Ekspresso",
+          "description": "Ekstrak biji kopi Arabika murni tanpa campuran",
+          "price": 20000,
+          "image": "https://static.fore.coffee/product/espresso173.jpg",
+          "releaseOn": "2021-12-10",
+          "id": 2,
+          "userId": 2,
+          "quantity": 4
+        },
+        {
+          "name": "Double Iced Shaken Latte",
+          "description": "Paduan klasik 2 shot espresso dengan susu dan krim",
+          "price": 33000,
+          "image": "https://static.fore.coffee/product/doubleicedshaken173.jpg",
+          "releaseOn": "2021-01-01",
+          "id": 7,
+          "userId": 2,
+          "quantity": 2
+        }
+      ],
+      "subtotal": "Rp 146.000,00",
+      "date": "2023-12-21T12:48:22.195Z",
+      "id": 5
+    },
+    {
+      "name": "Wahyu Haryo ",
+      "email": "user2@mail.com",
+      "alamat": "Ds. Kedungreja. Kec. Kedungreja, Cilacap",
+      "delivery": "J&P Express",
+      "payment": "E-Wallet",
+      "wrap": true,
+      "products": [
+        {
+          "name": "Iced Americano Coldplay",
+          "description": "Espresso shot dalam segelas air dengan menjaga ketebalan rasa kopinya",
+          "price": 24000,
+          "image": "https://static.fore.coffee/product/americanoiced173.jpg",
+          "releaseOn": "2014-11-12",
+          "id": 1,
+          "userId": 3,
+          "quantity": 3
+        },
+        {
+          "name": "Iced Café Latte",
+          "description": "Paduan espresso dengan susu sapi pilihan dan sedikit foam di atasnya",
+          "price": 30000,
+          "image": "https://static.fore.coffee/product/cafelatteiced173.jpg",
+          "releaseOn": "2023-03-03",
+          "id": 9,
+          "userId": 3,
+          "quantity": 2
+        }
+      ],
+      "subtotal": "Rp 132.000,00",
+      "date": "2023-12-21T18:11:14.735Z",
+      "id": 6
+    }
+  ]
+}
